@@ -2,7 +2,7 @@
 from flask import Module,render_template,request,flash,redirect
 
 #使用couchdb-ext
-from fkapp.models.model import User,Shop,Signature
+from fkapp.models.model import User,Shop,Category
 
 #关掉couchdb-kit
 #from fkapp.models.greeting import User
@@ -93,9 +93,13 @@ def shops():
 
 @admin.route("/test")
 def test():
-    signature = Signature(message='message', author='author')
-    signature.store()
-    print Signature.all()
+    cate1 = Category(name='category1')
+    cate1.store()
+    cate2 = Category(name='category2')
+    cate2.store()
+    ls = Category.all()
+    for l in ls:
+        print l.name
 #    page = paginate(Signature.all(), 5, request.args.get('start'))
 #    print page
     return render_template('admin/shops.html')

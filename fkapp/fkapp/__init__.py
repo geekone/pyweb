@@ -13,7 +13,7 @@ from fkapp import views
 
 #使用couchdb-ext
 from flaskext.couchdb import CouchDBManager
-from fkapp.models.user import User
+from fkapp.models.model import User,Category,Shop
 
 #关掉couchdbkit
 #from fkapp.extensions import couchdb
@@ -38,6 +38,8 @@ def create_app(config=None, modules=None):
 
     manager = CouchDBManager()
     manager.add_document(User)
+    manager.add_document(Category)
+    manager.add_document(Shop)
     manager.setup(app)
 
     #app.config['COUCHDB_DATABASE'] = 'mydb'

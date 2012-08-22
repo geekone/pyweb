@@ -9,20 +9,16 @@ __author__ = 'window2003@gmail.com'
 
 
 # model
-class Signature(Document):
-    doc_type = 'signature'
+class Category(Document):
+    doc_type = 'category'
+    name = TextField()
 
-    message = TextField()
-    author = TextField()
-    time = DateTimeField(default=datetime.datetime.now)
-
-    all = ViewField('guestbook', '''
+    all = ViewField('category', '''
         function (doc) {
-            if (doc.doc_type == 'signature') {
-                emit(doc.time, doc);
+            if (doc.doc_type == 'category') {
+                emit(doc._id, doc);
             };
         }''')
-
 
 class User(Document):
     doc_type="user"
@@ -30,13 +26,11 @@ class User(Document):
     password = TextField()
     nickname = TextField()
     level = IntegerField()
-
-    all = ViewField('blog', '''\
+    create_at = DateTimeField(default=datetime.datetime.now)
+    all = ViewField('user', '''\
     function (doc) {
         if (doc.doc_type == 'user') {
-
                 emit(null, doc);
-
         };
     }''')
 
