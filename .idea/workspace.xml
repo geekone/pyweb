@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d1dac8c8-12a7-47bc-a471-65f5ba74c091" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fkapp/fkapp/__init__.py" afterPath="$PROJECT_DIR$/fkapp/fkapp/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fkapp/fkapp/models/model.py" afterPath="$PROJECT_DIR$/fkapp/fkapp/models/model.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fkapp/fkapp/views/admin.py" afterPath="$PROJECT_DIR$/fkapp/fkapp/views/admin.py" />
     </list>
     <list id="bd9fea5e-abac-4cc6-bb25-1c9d4d380e11" name="Failed commit: Default" comment="把flaskweb 修改成一个 flask加script结构的" />
     <ignored path="pyweb.iws" />
@@ -416,7 +413,11 @@
       <created>1345599504442</created>
       <updated>1345599504442</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="添加了 category,user,shop models 并产生viewfield">
+      <created>1345608274873</created>
+      <updated>1345608274873</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -500,7 +501,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="bootstrap2.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加了 category,user,shop models 并产生viewfield" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -519,6 +520,7 @@
     <MESSAGE value="djapp 建立django 与couchdbkit ext 结合的例子" />
     <MESSAGE value="开始 fkapp couchdb 五大match比赛" />
     <MESSAGE value="bootstrap2.1" />
+    <MESSAGE value="添加了 category,user,shop models 并产生viewfield" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
