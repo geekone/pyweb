@@ -19,3 +19,8 @@ def index():
     # )
     # greet.save()
     return render_template('index.html')
+
+
+@frontend.route("/backbonetest")
+def backbonetest():
+    return render_template("backbonetest.html")

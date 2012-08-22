@@ -41,7 +41,7 @@ def create_app(config=None, modules=None):
     manager.add_document(Category)
     manager.add_document(Shop)
     manager.setup(app)
-
+#    manager.sync(app)
     #app.config['COUCHDB_DATABASE'] = 'mydb'
 
     #关掉couchdbkit
