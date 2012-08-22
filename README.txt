@@ -17,6 +17,8 @@ djapp
 fkapp
     flask + flask-couchdb
 
+flaskweb
+    flask + backbone + flask-sqlalchemy
 
 sqlalchemydemo
     sqlalchemy的demo

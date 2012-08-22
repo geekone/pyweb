@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1dac8c8-12a7-47bc-a471-65f5ba74c091" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\projects\mygit\pyweb\home\__init__.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.txt" afterPath="$PROJECT_DIR$/README.txt" />
     </list>
     <list id="bd9fea5e-abac-4cc6-bb25-1c9d4d380e11" name="Failed commit: Default" comment="把flaskweb 修改成一个 flask加script结构的" />
     <ignored path="pyweb.iws" />
@@ -52,8 +52,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.txt" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="README.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="39" selection-start="274" selection-end="274" vertical-scroll-proportion="0.5093834">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flaskweb/README.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -61,10 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="runserver.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/runserver.py">
+      <file leaf-file-name="README.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/djapp/README.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="4" column="17" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -84,7 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/fkapp/fkapp/models/user.py" />
         <option value="$PROJECT_DIR$/fkapp/fkapp/templates/admin/signup.html" />
         <option value="$PROJECT_DIR$/fkapp/fkapp/static/bootstrap/css/doc.css" />
         <option value="$PROJECT_DIR$/fkapp/fkapp/__init__.py" />
@@ -100,6 +108,7 @@
         <option value="$PROJECT_DIR$/fkapp/fkapp/views/admin.py" />
         <option value="$PROJECT_DIR$/fkapp/fkapp/templates/admin/users.html" />
         <option value="$PROJECT_DIR$/fkapp/fkapp/templates/admin/shops.html" />
+        <option value="$PROJECT_DIR$/README.txt" />
       </list>
     </option>
   </component>
@@ -381,7 +390,11 @@
       <created>1345623526235</created>
       <updated>1345623526235</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="clean">
+      <created>1345624072516</created>
+      <updated>1345624072516</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -465,7 +478,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了shop,user,category的 list页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -487,6 +500,7 @@
     <MESSAGE value="添加了 category,user,shop models 并产生viewfield" />
     <MESSAGE value="添加了shop,user,category的add list页面" />
     <MESSAGE value="添加了shop,user,category的 list页面" />
+    <MESSAGE value="clean" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -569,16 +583,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.txt">
+    <entry file="file://$PROJECT_DIR$/djapp/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="17" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flaskweb/README.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runserver.py">
+    <entry file="file://$PROJECT_DIR$/README.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="20" column="39" selection-start="274" selection-end="274" vertical-scroll-proportion="0.5093834">
           <folding />
         </state>
       </provider>
