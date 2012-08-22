@@ -1,29 +1,32 @@
-﻿/******************* 5.12备注**************/
-sports 目录是新建立的独立项目目录
+﻿/*********************目录的备注 ***************/
+
+D:\projects\mygit\pyweb
+
+flaskr
+    目录 与sqlite3的操作
+
+sports
+    目录是新建立的独立项目目录
+
+couchdemo
+    目录 用于 couchdb 的测试
+
+djapp
+    目录用于 django + couchdbkit
+
+fkapp
+    flask + flask-couchdb
 
 
-/********************* 以下是自己临时写的备注 ***************/
-
-D:\projects\github\
-
-flaskr目录 与sqlite3的操作
-flask 目录  用于 flask框架
-
-couchdemo 目录 用于 couchdb
+sqlalchemydemo
+    sqlalchemy的demo
 
 
-结构:
-
-pyweb- 正式
-    admin
-        -static
-        -templates
-        __init__.py
-        views.py
-    home
-        ....
+tornadoapp
+    tornado框架的demo
 
 
+一些参考文档
 http://www.lvchengba.com/province/100165_7
 
 http://www.91python.com/archives/393#id21
