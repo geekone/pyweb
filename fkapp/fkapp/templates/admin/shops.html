@@ -1,20 +1,26 @@
 {% extends "admin/layout.html" %}
 
 {% block body %}
-    <div>
-        <h3>Shop 列表 <a href="#" class="btn btn-success">新增</a> </h3>
-    </div>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>编号</th><th>Title</th><th>Address</th><th>管理</th>
-            </tr>
-            <tr>
-                <td>1</td><td>1</td><td>1</td><td>1</td>
-            </tr>
-        </thead>
+<div>
+    <h3>SHOP 列表 <a href="#" class="btn btn-success">新增</a> </h3>
+</div>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>编号</th><th>Title</th><th>address</th><th>Star</th><th>管理</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for shop in shops %}
+    <tr>
+        <td>{{shop._id}}</td><td>{{shop.title}}</td>
+        <td>{{shop.addr}}</td><td>{{shop.star}}</td>
+        <td>删除</td>
+    </tr>
+    {% endfor %}
+    </tbody>
 
-    </table>
+</table>
 {% endblock %}
 
 

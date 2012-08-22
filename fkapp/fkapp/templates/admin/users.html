@@ -7,12 +7,18 @@
 <table class="table table-bordered">
     <thead>
     <tr>
-        <th>编号</th><th>Title</th><th>Address</th><th>管理</th>
-    </tr>
-    <tr>
-        <td>1</td><td>1</td><td>1</td><td>1</td>
+        <th>编号</th><th>用户名</th><th>密码</th><th>昵称</th><tg>权限</tg><th>管理</th>
     </tr>
     </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td>{{user._id}}</td><td>{{user.username}}</td>
+            <td>{{user.password}}</td><td>{{user.nickname}}</td>
+            <td>{{user.level}}</td><td>删除</td>
+        </tr>
+        {% endfor %}
+    </tbody>
 
 </table>
 {% endblock %}

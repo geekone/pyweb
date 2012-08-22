@@ -29,11 +29,11 @@ def index():
 @admin.route("/categories/")
 def categories():
     try:
-        results = Category.all()
+        _category_results = Category.all()
     except Exception,e:
         current_app.logger.error(e);
 
-    return render_template('admin/categories.html',categories=results)
+    return render_template('admin/categories.html',categories=_category_results)
 
 #添加分类
 @admin.route('/categoryadd/')
@@ -53,7 +53,12 @@ def categorydel():
 
 @admin.route("/shops/")
 def shops():
-    return render_template('admin/shops.html')
+    try:
+        _shop_results = Shop.all()
+    except Exception,e:
+        current_app.logger.error(e)
+
+    return render_template('admin/shops.html',shops = _shop_results)
 
 #跳转到添加页面
 @admin.route('/shopadd/')
@@ -68,7 +73,12 @@ def shopdel():
 #用户
 @admin.route('/users/')
 def users():
-    return render_template('admin/users.html')
+    try:
+        _user_results = User.all()
+    except Exception,e:
+        current_app.logger.error(e)
+
+    return render_template('admin/users.html',users = _user_results)
 
 #添加
 @admin.route('/useradd/')
