@@ -19,8 +19,8 @@ admin = Module(__name__)
 
 @admin.route("/")
 def index():
-    current_app.logger.debug("loaded admin/index")
-    current_app.logger.error("this is error")
+#    current_app.logger.debug("loaded admin/index")
+#    current_app.logger.error("this is error")
     return render_template('admin/index.html')
 
 
@@ -89,9 +89,9 @@ def userdel():
 #        _password = request.form['password']
 #        user = User(username=_username,password=_password)
 #        user.save()
-#        return render_template('admin/users.html')
+#        return render_template('admin/users1.html')
 #    else:
-#        return render_template('admin/users.html')
+#        return render_template('admin/users1.html')
 
 
 @admin.route("/login/", methods=("GET","POST"))
@@ -111,20 +111,20 @@ def login():
 
 
 
-##user
-#@admin.route("/users",methods=('GET','POST'))
-#def users():
-#    form = SignupForm(next=request.args.get('next',None))
-#    if form.validate_on_submit():
-#        _username = form.username.data
-#        _password = form.password.data
-#        _nickname = form.nickname.data
-#        user = User(username=_username,password=_password,nickname = _nickname,level = 1)
-#        user.store()
-#        return redirect('admin/users')
-#    else:
-#    #flash("back,errors")
-#        return render_template('admin/users.html',form = form)
+#user
+@admin.route("/users1",methods=('GET','POST'))
+def users1():
+    form = SignupForm(next=request.args.get('next',None))
+    if form.validate_on_submit():
+        _username = form.username.data
+        _password = form.password.data
+        _nickname = form.nickname.data
+        user = User(username=_username,password=_password,nickname = _nickname,level = 1)
+        user.store()
+        return redirect('admin/users1')
+    else:
+    #flash("back,errors")
+        return render_template('admin/users1.html',form = form)
 
 
 
@@ -139,7 +139,7 @@ def signup():
         _nickname = form.nickname.data
         user = User(username=_username,password=_password,nickname = _nickname,level = 1)
         user.store()
-        return redirect('/admin/users')
+        return redirect('/admin/users1')
     else:
     #flash("back,errors")
         return render_template('admin/signup.html',form = form)
@@ -153,10 +153,27 @@ def signup():
 #初始数据
 @admin.route("/initdata")
 def initdata():
-    cate1 = Category(name='category1')
-    cate1.store()
-    cate2 = Category(name='category2')
-    cate2.store()
+#    cate1 = Category(name='category1')
+#    cate1.store()
+#    cate2 = Category(name='category2')
+#    cate2.store()
+#    shop1 = Shop(title="shop1",addr="shop1 addr",star=1)
+#    shop1.store()
+#    shop2 = Shop(title="shop2",addr="shop2 addr",star=2)
+#    shop2.store()
+#    shop3 = Shop(title="shop3",addr="shop3 addr",star=3)
+#    shop3.store()
+#
+#    user1 = User(username="test1",password="test1",nickname="Test1",level=0)
+#    user1.store()
+#    user2 = User(username="test2",password="test2",nickname="Test2",level=0)
+#    user2.store()
+#    user3 = User(username="test3",password="test3",nickname="Test3",level=0)
+#    user3.store()
+#    user4 = User(username="test4",password="test4",nickname="Test4",level=0)
+#    user4.store()
+
+
 #    ls = Category.all()
 #    for l in ls:
 #        print l.name

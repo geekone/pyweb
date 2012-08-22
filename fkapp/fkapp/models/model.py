@@ -30,7 +30,7 @@ class User(Document):
     all = ViewField('user', '''\
     function (doc) {
         if (doc.doc_type == 'user') {
-                emit(null, doc);
+                emit(doc._id, doc);
         };
     }''')
 
@@ -44,7 +44,7 @@ class Shop(Document):
     create_at = DateTimeField(default=datetime.datetime.now)
     all = ViewField('shop','''function(doc){
         if(doc.doc_type== 'shop'){
-            emit(null,doc);
+            emit(doc._id,doc);
         };
     }''')
 
