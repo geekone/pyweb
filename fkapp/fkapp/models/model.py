@@ -41,4 +41,11 @@ class Shop(Document):
     title = TextField()
     addr = TextField()
     star = TextField()
+    create_at = DateTimeField(default=datetime.datetime.now)
+    all = ViewField('shop','''function(doc){
+        if(doc.doc_type== 'shop'){
+            emit(null,doc);
+        };
+    }''')
+
 

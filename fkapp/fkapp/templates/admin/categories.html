@@ -1,0 +1,21 @@
+{% extends "admin/layout.html" %}
+{% block body %}
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>编号</th><th>名称</th><th>管理</th>
+    </tr>
+    {% for category in categories %}
+    <tr>
+        <td>{{ category._id }}</td><td> {{ category.name }} </td><td><a href="{{url_for('categorydel')}}">删除</a></td>
+    </tr>
+    {% endfor %}
+
+
+
+    </thead>
+
+</table>
+
+{% endblock %}
