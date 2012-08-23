@@ -36,12 +36,15 @@ def create_app(config=None, modules=None):
     # config
     app.config.from_pyfile(config)
 
-    manager = CouchDBManager()
-    manager.add_document(User)
-    manager.add_document(Category)
-    manager.add_document(Shop)
-    manager.setup(app)
+#    manager = CouchDBManager()
+#    manager.add_document(User)
+#    manager.add_document(Category)
+#    manager.add_document(Shop)
+#    manager.setup(app)
+
+    #这句不解
 #    manager.sync(app)
+    #不写在配置文件中的方式
     #app.config['COUCHDB_DATABASE'] = 'mydb'
 
     #关掉couchdbkit
