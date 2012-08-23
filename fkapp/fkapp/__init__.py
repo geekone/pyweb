@@ -17,7 +17,8 @@ from fkapp.models.model import User,Category,Shop
 
 #关掉couchdbkit
 #from fkapp.extensions import couchdb
-
+#这里使用mongoalchemy
+from fkapp.extensions import db
 
 DEFAULT_APP_NAME = 'fkapp'
 
@@ -36,6 +37,14 @@ def create_app(config=None, modules=None):
     # config
     app.config.from_pyfile(config)
 
+    #不在config文件中配置 mongoalchemy
+#    app.config['MONGOALCHEMY_SERVER'] = '127.0.0.1'
+#    app.config['MONGOALCHEMY_DATABASE'] = 'test'
+#    app.config['MONGOALCHEMY_USER'] = 'ajaxj'
+#    app.config['MONGOALCHEMY_PASSWORD'] = 'eeeeeeee'
+    #这句关键，不设为false就账号通不过
+#    app.config['MONGOALCHEMY_SERVER_AUTH'] = False
+
 #    manager = CouchDBManager()
 #    manager.add_document(User)
 #    manager.add_document(Category)
@@ -47,8 +56,11 @@ def create_app(config=None, modules=None):
     #不写在配置文件中的方式
     #app.config['COUCHDB_DATABASE'] = 'mydb'
 
-    #关掉couchdbkit
-    #configure_extensions(app)
+
+
+
+    #关掉couchdbkit或mongoalchemy
+    configure_extensions(app)
 
     configure_logging(app)
 
@@ -60,9 +72,11 @@ def create_app(config=None, modules=None):
 
 
 #关掉couchdbkit
-# def configure_extensions(app):
-#     # configure extensions
+def configure_extensions(app):
+#     # 关掉couchdb
 #     couchdb.init_app(app)
+    #使用mongoalchemy
+    db.init_app(app)
 
 
 

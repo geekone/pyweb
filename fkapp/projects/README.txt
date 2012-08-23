@@ -19,3 +19,10 @@ http://docs.torriacg.org/flask/patterns/wtforms.html
 
 backbone.js
     http://backbonejs.org/
+
+
+mongodb:
+    资料网站:
+    http://packages.python.org/Flask-MongoAlchemy/
+    mongokit资料
+    http://flask.pocoo.org/docs/patterns/mongokit/

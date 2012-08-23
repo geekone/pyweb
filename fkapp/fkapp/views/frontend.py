@@ -4,6 +4,7 @@ from flask import Module,render_template
 
 # 停止couchdbkit
 # from fkapp.models.greeting import Greeting
+from fkapp.models.greeting import Book
 
 __author__ = 'Administrator'
 
@@ -24,3 +25,9 @@ def index():
 @frontend.route("/backbonetest")
 def backbonetest():
     return render_template("backbonetest.html")
+
+@frontend.route('/testmongo')
+def testmongo():
+    dive = Book(title='Dive Into Python', year=2004)
+    dive.save()
+    return  "testmongo"
