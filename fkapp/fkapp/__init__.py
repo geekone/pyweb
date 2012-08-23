@@ -18,7 +18,7 @@ from fkapp.models.model import User,Category,Shop
 #关掉couchdbkit
 #from fkapp.extensions import couchdb
 #这里使用mongoalchemy
-from fkapp.extensions import db
+#from fkapp.extensions import db
 
 DEFAULT_APP_NAME = 'fkapp'
 
@@ -60,7 +60,7 @@ def create_app(config=None, modules=None):
 
 
     #关掉couchdbkit或mongoalchemy
-    configure_extensions(app)
+#    configure_extensions(app)
 
     configure_logging(app)
 
@@ -72,11 +72,11 @@ def create_app(config=None, modules=None):
 
 
 #关掉couchdbkit
-def configure_extensions(app):
+#def configure_extensions(app):
 #     # 关掉couchdb
 #     couchdb.init_app(app)
     #使用mongoalchemy
-    db.init_app(app)
+#    db.init_app(app)
 
 
 

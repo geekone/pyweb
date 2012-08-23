@@ -25,4 +25,6 @@ mongodb:
     资料网站:
     http://packages.python.org/Flask-MongoAlchemy/
     mongokit资料
+    http://packages.python.org/Flask-MongoKit/
+    http://namlook.github.com/mongokit/
     http://flask.pocoo.org/docs/patterns/mongokit/

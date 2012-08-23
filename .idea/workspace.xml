@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d1dac8c8-12a7-47bc-a471-65f5ba74c091" name="Default" comment="">
+    <list default="true" id="d1dac8c8-12a7-47bc-a471-65f5ba74c091" name="Default" comment="添加flask-mongoalchemy的配置方法">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fkapp/fkapp/__init__.py" afterPath="$PROJECT_DIR$/fkapp/fkapp/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fkapp/fkapp/config.cfg" afterPath="$PROJECT_DIR$/fkapp/fkapp/config.cfg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fkapp/fkapp/extensions.py" afterPath="$PROJECT_DIR$/fkapp/fkapp/extensions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fkapp/fkapp/models/greeting.py" afterPath="$PROJECT_DIR$/fkapp/fkapp/models/greeting.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fkapp/fkapp/views/frontend.py" afterPath="$PROJECT_DIR$/fkapp/fkapp/views/frontend.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fkapp/projects/README.txt" afterPath="$PROJECT_DIR$/fkapp/projects/README.txt" />
     </list>
     <list id="bd9fea5e-abac-4cc6-bb25-1c9d4d380e11" name="Failed commit: Default" comment="把flaskweb 修改成一个 flask加script结构的" />
@@ -34,7 +31,7 @@
       <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fkapp/fkapp/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="49" selection-start="861" selection-end="861" vertical-scroll-proportion="0.0">
+            <state line="21" column="0" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#20#29#0" expanded="true" />
               </folding>
@@ -45,7 +42,7 @@
       <file leaf-file-name="greeting.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fkapp/fkapp/models/greeting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="19" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
+            <state line="4" column="0" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#72#103#0" expanded="true" />
               </folding>
@@ -53,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="extensions.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="extensions.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fkapp/fkapp/extensions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="16" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
+            <state line="15" column="0" selection-start="272" selection-end="272" vertical-scroll-proportion="0.40311173">
               <folding />
             </state>
           </provider>
@@ -65,7 +62,7 @@
       <file leaf-file-name="config.cfg" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fkapp/fkapp/config.cfg">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
+            <state line="6" column="0" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -80,10 +77,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.txt" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fkapp/projects/README.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="14" selection-start="458" selection-end="458" vertical-scroll-proportion="0.698727">
+            <state line="21" column="0" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -131,12 +128,12 @@
         <option value="$PROJECT_DIR$/couchdemo/samples/s1.py" />
         <option value="$PROJECT_DIR$/fkapp/fkapp/views/admin.py" />
         <option value="$PROJECT_DIR$/fkapp/fkapp/templates/backbonetest.html" />
-        <option value="$PROJECT_DIR$/fkapp/fkapp/extensions.py" />
         <option value="$PROJECT_DIR$/fkapp/fkapp/models/greeting.py" />
         <option value="$PROJECT_DIR$/fkapp/fkapp/views/frontend.py" />
-        <option value="$PROJECT_DIR$/fkapp/fkapp/__init__.py" />
-        <option value="$PROJECT_DIR$/fkapp/fkapp/config.cfg" />
         <option value="$PROJECT_DIR$/fkapp/projects/README.txt" />
+        <option value="$PROJECT_DIR$/fkapp/fkapp/config.cfg" />
+        <option value="$PROJECT_DIR$/fkapp/fkapp/__init__.py" />
+        <option value="$PROJECT_DIR$/fkapp/fkapp/extensions.py" />
       </list>
     </option>
   </component>
@@ -565,7 +562,11 @@
       <created>1345703741965</created>
       <updated>1345703741965</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="添加flask-mongoalchemy的配置方法">
+      <created>1345706154252</created>
+      <updated>1345706154252</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -649,7 +650,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了projects目录用来管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加flask-mongoalchemy的配置方法" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -674,6 +675,7 @@
     <MESSAGE value="clean" />
     <MESSAGE value="添加了backbone，给couchdb添加用户密码" />
     <MESSAGE value="添加了projects目录用来管理" />
+    <MESSAGE value="添加flask-mongoalchemy的配置方法" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -729,13 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fkapp/fkapp/extensions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="16" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fkapp/fkapp/templates/backbonetest.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="26" selection-start="456" selection-end="456" vertical-scroll-proportion="-0.6785714">
@@ -750,6 +745,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fkapp/projects/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fkapp/fkapp/views/frontend.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="32" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0">
@@ -759,14 +761,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fkapp/fkapp/config.cfg">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
+        <state line="6" column="0" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fkapp/fkapp/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="49" selection-start="861" selection-end="861" vertical-scroll-proportion="0.0">
+        <state line="21" column="0" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#20#29#0" expanded="true" />
           </folding>
@@ -775,16 +777,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fkapp/fkapp/models/greeting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="19" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
+        <state line="4" column="0" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#72#103#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fkapp/projects/README.txt">
+    <entry file="file://$PROJECT_DIR$/fkapp/fkapp/extensions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="14" selection-start="458" selection-end="458" vertical-scroll-proportion="0.698727">
+        <state line="15" column="0" selection-start="272" selection-end="272" vertical-scroll-proportion="0.40311173">
           <folding />
         </state>
       </provider>
