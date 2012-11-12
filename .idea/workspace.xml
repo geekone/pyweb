@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d1dac8c8-12a7-47bc-a471-65f5ba74c091" name="Default" comment="">
+    <list default="true" id="d1dac8c8-12a7-47bc-a471-65f5ba74c091" name="Default" comment="添加了admin.py category,item table">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flaskweb/mysite/templates/admin/categorylist.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flaskweb/mysite/templates/admin/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flaskweb/mysite/templates/admin/itemlist.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flaskweb/mysite/models/model.py" afterPath="$PROJECT_DIR$/flaskweb/mysite/models/model.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flaskweb/mysite/views/admin.py" afterPath="$PROJECT_DIR$/flaskweb/mysite/views/admin.py" />
     </list>
     <list id="bd9fea5e-abac-4cc6-bb25-1c9d4d380e11" name="Failed commit: Default" comment="把flaskweb 修改成一个 flask加script结构的" />
     <ignored path="pyweb.iws" />
@@ -89,7 +90,7 @@
           <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/flaskweb/mysite/templates/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="6" column="105" selection-start="179" selection-end="280" vertical-scroll-proportion="0.40425533">
+                <state line="12" column="22" selection-start="353" selection-end="353" vertical-scroll-proportion="-0.40425533">
                   <folding />
                 </state>
               </provider>
@@ -156,7 +157,7 @@
           <file leaf-file-name="itemlist.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/flaskweb/mysite/templates/admin/itemlist.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="3" column="14" selection-start="44" selection-end="44" vertical-scroll-proportion="0.18688525">
+                <state line="9" column="7" selection-start="138" selection-end="138" vertical-scroll-proportion="0.5606557">
                   <folding />
                 </state>
               </provider>
@@ -689,7 +690,11 @@
       <created>1352708477747</created>
       <updated>1352708477747</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="添加了admin.py category,item table">
+      <created>1352710114624</created>
+      <updated>1352710114624</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -772,7 +777,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了bootstrap 2.11" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加了admin.py category,item table" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -799,6 +804,7 @@
     <MESSAGE value="添加了projects目录用来管理" />
     <MESSAGE value="添加flask-mongoalchemy的配置方法" />
     <MESSAGE value="添加了bootstrap 2.11" />
+    <MESSAGE value="添加了admin.py category,item table" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -890,13 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flaskweb/mysite/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="105" selection-start="179" selection-end="280" vertical-scroll-proportion="0.40425533">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flaskweb/mysite/templates/admin/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="23" selection-start="34" selection-end="53" vertical-scroll-proportion="-2.0357144">
@@ -911,9 +910,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/flaskweb/mysite/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="22" selection-start="353" selection-end="353" vertical-scroll-proportion="-0.40425533">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/flaskweb/mysite/templates/admin/itemlist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="14" selection-start="44" selection-end="44" vertical-scroll-proportion="0.18688525">
+        <state line="9" column="7" selection-start="138" selection-end="138" vertical-scroll-proportion="0.5606557">
           <folding />
         </state>
       </provider>
