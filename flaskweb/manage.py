@@ -22,7 +22,6 @@ def createall():
 @manager.command
 def dropall():
     "Drops all database tables"
-
     if prompt_bool("Are you sure ? You will lose all your data !"):
         db.drop_all()
 

@@ -34,20 +34,20 @@ greet = Greeting(
 greet.save()
 
 
-#取出一个
-greet = Greeting.get('679bdea0842287e294fc1920045d2b5c')
+##取出一个
+#greet = Greeting.get('679bdea0842287e294fc1920045d2b5c')
+##
+#print greet['author']
+#print greet.content
+#print greet._rev
+##修改
+#greet.author = 'abdcfdd'
+#greet.save()
 #
-print greet['author']
-print greet.content
-print greet._rev
-#修改
-greet.author = 'abdcfdd'
-greet.save()
-
-print greet['author']
-print greet.content
-print greet._rev
-#删除
-greet.delete()
+#print greet['author']
+#print greet.content
+#print greet._rev
+##删除
+#greet.delete()
 
 
