@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 from mysite.models.model import Category,Item
-from mysite.utils.fetch import foo
+
 from mysite.extensions import db
 
 __author__ = 'window2003@gmail.com'
