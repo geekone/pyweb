@@ -1,0 +1,701 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="keywords" content=""/>
+    <meta http-equiv="description" content=""/>
+    <title>
+        日常祝福 日常祝福语 日常祝福短信
+    </title>
+    <link href="/favicon.ico" rel="Shortcut Icon" type="image/x-icon" />
+    <link href="/favicon.ico" rel="Bookmark" type="image/x-icon" />
+
+    <link href="{{url_for('.static',filename='css/css.css')}}" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/staticpage.js"></script>
+    <script type="text/javascript" src="/js/share.js"></script>
+    <script type="text/javascript" src="/js/renren.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            //树形列表
+            $("#MS .content .main .right ul li").hover(
+                    function(){
+                        if($("#MS .content .main .right ul li").index($(this))==0 || $(this).hasClass("noborder")) return false;//头尾不作用
+                        if($("#MS .content .main .right ul li").index($(this))==1)
+                        {$(this).prev("li").addClass("before1");}
+                        else{$(this).prev("li").addClass("before");}
+                        $(this).addClass("on");
+                        $(this).next("li").addClass("after");
+                    },
+                    function(){
+                        $(this).removeClass("on");
+                        $(this).siblings().removeClass("on before after before1");
+                    });
+        });
+
+        function loading(){
+            $("body").append("<div class='zhezhao'></div><img src='/images/ajax-loading.gif' class='loading'/>");
+        }
+
+    </script><link href="{{url_for('.static',filename='css/column.css')}}" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="/js/column.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var columnId = '77';
+            if(columnId != 0){
+                $("a[columnId=" + columnId + "][class=tip]").parents("li").children(".ex").css("color", "red");
+            }
+
+            //分页实现
+            $(".Cut_page img,#goPageSize").click(function(){
+                var columnId = $("#columnId").val();
+                var pageNo = $(this).attr("pageNo");
+                pageNo = (pageNo == undefined ? $("#goPage").val() : pageNo);
+                var totalPage = $("#totalPage").val();
+                var Page = BasePage(pageNo, totalPage);
+                Page.go();
+            });
+        });
+
+        function linkColumnContent(columnId, relationId, columnName){
+            var url;
+            if(relationId){
+                url ="/duanxinku/column/" + columnId + "_" + relationId + "/1.html";
+            }else{
+                url ="/duanxinku/column/" + columnId + "/1.html";
+            }
+            window.location.href = url;
+        }
+    </script>
+
+    <style type="text/css">
+        body { behavior:url("/css/htc/csshover.htc"); }
+    </style>
+</head>
+<body>
+<!--头部banner-->
+<script type="text/javascript" src="/js/zhuanti/banner2.js"></script>
+<!--头部banner结束-->
+<!--[if lte IE 6]>
+<script src="/js/DD_belatedPNG_0.0.8a.js"></script>
+<script type="text/javascript">
+    try{
+        DD_belatedPNG.fix('*');
+    }catch(err){}
+    /* 透明PNG图片IE6解决方案 */
+
+</script>
+<![endif]-->
+<div class="status_bar">
+    <div class="top" id="userInfo">
+        <span id="wenxintishi"></span>
+        <div class='r' id="logincooks"></div>
+    </div>
+</div>
+<div id="head">
+    <div class="nav">
+        <div class="logo"><a href="/"><img src="/images/zhufulogo.png"/></a></div>
+        <!--导航栏目开始-->
+        <ul>
+            <li><a href="/" class="c1"  title="首页"></a></li>
+            <li><a href="http://www.aizhufu.cn/duanxinku/column/77/1.html" class="c3 on" title="短信库"></a></li>
+            <li><a class="c2" href="/taskmanage/calender.jhtml" title="记忆日"></a></li>
+            <li><a class="c5" href="/app.jsp" title="客户端下载"></a></li>
+            <li><a class="c4" href="/usermanage/userAccount.jhtml" title="个人中心"></a></li>
+        </ul>
+        <!--导航栏目结束-->
+    </div>
+</div>
+
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=2&amp;uid=666064" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+</script>
+<!-- Baidu Button END -->
+
+<script type="text/javascript" src="/js/loginCook.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("a:contains('登录')").live("click", function(){
+            var path = window.location.href;
+            var text = $(this).text();
+            var size = path.indexOf("URL");
+            if(size > 0 ) {
+                if(text=="注册" || text=="登录"){
+                    $(this).attr("href","/login.jhtml?"+path.substring(size,path.length));
+                }else{
+                    $(this).attr("href",path);
+                }
+            } else {
+                $(this).attr("href","/login.jhtml?URL=" + path);
+            }
+        });
+
+        $("a:contains('注册')").live("click", function(){
+            var path = window.location.href;
+            var text = $(this).text();
+            var size = path.indexOf("URL");
+            if(size > 0) {
+                if(text=="注册" || text=="登录"){
+                    $(this).attr("href","/register.jhtml?"+path.substring(size,path.length));
+                }else{
+                    $(this).attr("href",path);
+                }
+            } else {
+                $(this).attr("href","/register.jhtml?URL=" + path);
+            }
+        });
+
+        try{
+            if(!user_info_ajx("/")) {
+                getUserCookies('/');
+            }
+        }catch(e){
+            alert("用户登录信息加载出错！");
+        }
+
+    });
+    function sessionOutTimecloseFancybox(){
+        window.location.href="/";
+        $.fancybox.close();
+    }
+
+
+    function loginAction(bthUrl){
+        document.getElementById('login').href =bthUrl;
+        $("#login").click();
+    }
+
+    function AddFavorite(sURL, sTitle){
+        try {
+            window.external.addFavorite(sURL, sTitle);
+        } catch (e) {
+            try {
+                window.sidebar.addPanel(sTitle, sURL," ");
+            } catch (e) {
+                alert('加入收藏失败，请使用Ctrl+D进行添加');
+            }
+        }
+    }
+
+</script>
+
+<div class="clear"></div>
+<!--main -->
+<div id="MS">
+<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
+<div class="content">
+<!--title-->
+<div class="title01">
+    <ul>
+        <li><a href="http://www.aizhufu.cn/duanxinku/column/77/1.html" class="on" >按栏目分</a></li>
+        <li><a href="/duanxinku/topic/119/1.html"  >按主题分</a></li>
+        <li><a href="http://www.aizhufu.cn/duanxinku/relation/1/1.html">按关系分</a></li>
+        <li><a href="/contentmanage/package_content.jhtml">按套餐分</a></li>
+    </ul>
+    <div class="textlink">
+        <!--文字广告开始-->
+        <script type="text/javascript" src="/js/ad/textlink.js"></script>
+        <!--文字广告结束-->
+    </div>
+</div>
+<!--title end-->		<!--横幅广告开始-->
+<script type="text/javascript" src="/js/ad/poster.js"></script>
+<!---横幅广告结束-->
+
+<!--main-->
+<form action="/contentmanage/columnQuery.jhtml" method="post" name="form" id="form">
+<input type="hidden" name="column.columnId" value="77" id="columnId" />
+<input type="hidden" name="column.columnName" value="日常祝福" id="columnName"/>
+<input type="hidden" name="curPage" id="curPage" value="1" />
+<input type="hidden" name="pageCount" id="totalPage" value="162"/>
+<div class="main">
+<div class="column_left_body">
+<div class="left">
+<!--栏目新导航-->
+<b class="bt"></b>
+<div class="list">
+<div class="title">精品推荐</div>
+<div class="treelist2" >
+    <ul id="birth">
+        <li><a href="#"   columnId="77" relationId="1" ><span class="red">送爱人</span>的日常祝福</a></li>
+        <li><a href="#"   columnId="77" relationId="2" ><span class="red">送长辈</span>的日常祝福</a></li>
+        <li><a href="#"   columnId="77" relationId="3" ><span class="red">送朋友</span>的日常祝福</a></li>
+        <li><a href="#"   columnId="77" relationId="4" ><span class="red">送客户</span>的日常祝福</a></li>
+    </ul>
+</div>			        <div class="space"></div>
+<div class="title2">短信分类</div>
+<div class="treelist">
+    <h1>日常问候</h1>
+    <ul>
+        <li><a
+                style="color:red"  columnId="77" href="#">日常祝福</a>
+        </li>
+        <li><a
+                columnId="68" href="#">幽默祝福</a>
+        </li>
+        <li><a
+                columnId="69" href="#">周末问候</a>
+        </li>
+        <li><a
+                columnId="67" href="#">生日祝福</a>
+        </li>
+        <li><a  class="ex"
+                columnId="230" href="#">早安晚安</a>
+            <div class="ex_arrow" style="display:none;"></div>
+            <div class="ex_box" style="display:none;">
+                <span>-<a href="#" class="tip"  columnId="150" >早安祝福</a></span>
+                <span>-<a href="#" class="tip"  columnId="212" >晚安祝福</a></span>
+            </div>
+        </li>
+        <li><a  class="ex"
+                columnId="44" href="#">健康关怀</a>
+            <div class="ex_arrow" style="display:none;"></div>
+            <div class="ex_box" style="display:none;">
+                <span>-<a href="#" class="tip"  columnId="49" >健康短信</a></span>
+                <span>-<a href="#" class="tip"  columnId="158" >生活短信</a></span>
+                <span>-<a href="#" class="tip"  columnId="216" >生病问候</a></span>
+            </div>
+        </li>
+        <li><a
+                columnId="277" href="#">送别短信</a>
+        </li>
+        <li><a
+                columnId="278" href="#">感谢短信</a>
+        </li>
+        <li><a  class="ex"
+                columnId="232" href="#">爱情宝典</a>
+            <div class="ex_arrow" style="display:none;"></div>
+            <div class="ex_box" style="display:none;">
+                <span>-<a href="#" class="tip"  columnId="256" >思念短信</a></span>
+                <span>-<a href="#" class="tip"  columnId="176" >情话短信</a></span>
+                <span>-<a href="#" class="tip"  columnId="231" >表白短信</a></span>
+                <span>-<a href="#" class="tip"  columnId="236" >求婚短信</a></span>
+                <span>-<a href="#" class="tip"  columnId="237" >爱情短信</a></span>
+            </div>
+        </li>
+        <li><a
+                columnId="215" href="#">道歉短信</a>
+        </li>
+    </ul>
+    <div class="clear"></div>
+</div>
+<div class="treelist">
+    <h1>节日祝福</h1>
+    <ul>
+        <li><a  class="ex"
+                columnId="65" href="#">中国传统节</a>
+            <div class="ex_arrow" style="display:none;"></div>
+            <div class="ex_box" style="display:none;">
+                <span>-<a href="#" class="tip"  columnId="121" >元旦</a></span>
+                <span>-<a href="#" class="tip"  columnId="64" >小年</a></span>
+                <span>-<a href="#" class="tip"  columnId="63" >除夕</a></span>
+                <span>-<a href="#" class="tip"  columnId="62" >春节</a></span>
+                <span>-<a href="#" class="tip"  columnId="61" >五路财神日</a></span>
+                <span>-<a href="#" class="tip"  columnId="59" >元宵节</a></span>
+                <span>-<a href="#" class="tip"  columnId="58" >龙抬头</a></span>
+                <span>-<a href="#" class="tip"  columnId="57" >妇女节</a></span>
+                <span>-<a href="#" class="tip"  columnId="56" >植树节</a></span>
+                <span>-<a href="#" class="tip"  columnId="132" >清明节</a></span>
+                <span>-<a href="#" class="tip"  columnId="87" >劳动节</a></span>
+                <span>-<a href="#" class="tip"  columnId="88" >青年节</a></span>
+                <span>-<a href="#" class="tip"  columnId="90" >儿童节</a></span>
+                <span>-<a href="#" class="tip"  columnId="92" >端午节</a></span>
+                <span>-<a href="#" class="tip"  columnId="146" >建党节</a></span>
+                <span>-<a href="#" class="tip"  columnId="147" >建军节</a></span>
+                <span>-<a href="#" class="tip"  columnId="93" >七夕节</a></span>
+                <span>-<a href="#" class="tip"  columnId="152" >中元节</a></span>
+                <span>-<a href="#" class="tip"  columnId="94" >教师节</a></span>
+                <span>-<a href="#" class="tip"  columnId="95" >中秋节</a></span>
+                <span>-<a href="#" class="tip"  columnId="96" >国庆节</a></span>
+                <span>-<a href="#" class="tip"  columnId="97" >重阳节</a></span>
+                <span>-<a href="#" class="tip"  columnId="191" >扫尘日</a></span>
+                <span>-<a href="#" class="tip"  columnId="192" >祈福日</a></span>
+                <span>-<a href="#" class="tip"  columnId="197" >送穷日</a></span>
+                <span>-<a href="#" class="tip"  columnId="205" >玉皇诞辰</a></span>
+                <span>-<a href="#" class="tip"  columnId="254" >记者节</a></span>
+                <span>-<a href="#" class="tip"  columnId="255" >护士节</a></span>
+                <span>-<a href="#" class="tip"  columnId="259" >佛诞日</a></span>
+                <span>-<a href="#" class="tip"  columnId="252" >腊八节</a></span>
+                <span>-<a href="#" class="tip"  columnId="213" >闰年闰月</a></span>
+                <span>-<a href="#" class="tip"  columnId="294" >貔貅生日</a></span>
+            </div>
+        </li>
+        <li><a  class="ex"
+                columnId="210" href="#">西方传统节</a>
+            <div class="ex_arrow" style="display:none;"></div>
+            <div class="ex_box" style="display:none;">
+                <span>-<a href="#" class="tip"  columnId="193" >日记情人节</a></span>
+                <span>-<a href="#" class="tip"  columnId="167" >橙色情人节</a></span>
+                <span>-<a href="#" class="tip"  columnId="60" >情人节</a></span>
+                <span>-<a href="#" class="tip"  columnId="179" >拥抱情人节</a></span>
+                <span>-<a href="#" class="tip"  columnId="120" >圣诞节</a></span>
+                <span>-<a href="#" class="tip"  columnId="185" >平安夜</a></span>
+                <span>-<a href="#" class="tip"  columnId="119" >感恩节</a></span>
+                <span>-<a href="#" class="tip"  columnId="89" >母亲节</a></span>
+                <span>-<a href="#" class="tip"  columnId="91" >父亲节</a></span>
+                <span>-<a href="#" class="tip"  columnId="244" >复活节</a></span>
+                <span>-<a href="#" class="tip"  columnId="247" >黑色情人节</a></span>
+                <span>-<a href="#" class="tip"  columnId="226" >白色情人节</a></span>
+                <span>-<a href="#" class="tip"  columnId="251" >绿色情人节</a></span>
+                <span>-<a href="#" class="tip"  columnId="131" >愚人节</a></span>
+                <span>-<a href="#" class="tip"  columnId="98" >万圣节</a></span>
+                <span>-<a href="#" class="tip"  columnId="261" >玫瑰情人节</a></span>
+                <span>-<a href="#" class="tip"  columnId="285" >亲吻情人节</a></span>
+                <span>-<a href="#" class="tip"  columnId="286" >巴西情人节</a></span>
+                <span>-<a href="#" class="tip"  columnId="291" >银色情人节</a></span>
+            </div>
+        </li>
+        <li><a  class="ex"
+                columnId="55" href="#">二十四节气</a>
+            <div class="ex_arrow" style="display:none;"></div>
+            <div class="ex_box" style="display:none;">
+                <span>-<a href="#" class="tip"  columnId="50" >立春</a></span>
+                <span>-<a href="#" class="tip"  columnId="51" >雨水</a></span>
+                <span>-<a href="#" class="tip"  columnId="52" >惊蛰</a></span>
+                <span>-<a href="#" class="tip"  columnId="53" >春分</a></span>
+                <span>-<a href="#" class="tip"  columnId="54" >清明</a></span>
+                <span>-<a href="#" class="tip"  columnId="100" >谷雨</a></span>
+                <span>-<a href="#" class="tip"  columnId="101" >立夏</a></span>
+                <span>-<a href="#" class="tip"  columnId="102" >小满</a></span>
+                <span>-<a href="#" class="tip"  columnId="103" >芒种</a></span>
+                <span>-<a href="#" class="tip"  columnId="104" >夏至</a></span>
+                <span>-<a href="#" class="tip"  columnId="105" >小暑</a></span>
+                <span>-<a href="#" class="tip"  columnId="106" >大暑</a></span>
+                <span>-<a href="#" class="tip"  columnId="107" >立秋</a></span>
+                <span>-<a href="#" class="tip"  columnId="108" >处暑</a></span>
+                <span>-<a href="#" class="tip"  columnId="109" >白露</a></span>
+                <span>-<a href="#" class="tip"  columnId="110" >秋分</a></span>
+                <span>-<a href="#" class="tip"  columnId="111" >寒露</a></span>
+                <span>-<a href="#" class="tip"  columnId="112" >霜降</a></span>
+                <span>-<a href="#" class="tip"  columnId="113" >立冬</a></span>
+                <span>-<a href="#" class="tip"  columnId="114" >小雪</a></span>
+                <span>-<a href="#" class="tip"  columnId="115" >大雪</a></span>
+                <span>-<a href="#" class="tip"  columnId="116" >冬至</a></span>
+                <span>-<a href="#" class="tip"  columnId="117" >小寒</a></span>
+                <span>-<a href="#" class="tip"  columnId="118" >大寒</a></span>
+            </div>
+        </li>
+        <li><a  class="ex"
+                columnId="66" href="#">网络节日</a>
+            <div class="ex_arrow" style="display:none;"></div>
+            <div class="ex_box" style="display:none;">
+                <span>-<a href="#" class="tip"  columnId="154" >九月九</a></span>
+                <span>-<a href="#" class="tip"  columnId="188" >小光棍节</a></span>
+                <span>-<a href="#" class="tip"  columnId="207" >爱之日</a></span>
+                <span>-<a href="#" class="tip"  columnId="173" >雪泪节</a></span>
+                <span>-<a href="#" class="tip"  columnId="217" >不三不四日</a></span>
+                <span>-<a href="#" class="tip"  columnId="174" >世界好友周</a></span>
+                <span>-<a href="#" class="tip"  columnId="243" >姊妹节</a></span>
+                <span>-<a href="#" class="tip"  columnId="162" >要你爱我日</a></span>
+                <span>-<a href="#" class="tip"  columnId="253" >爸爸节</a></span>
+                <span>-<a href="#" class="tip"  columnId="220" >女生节</a></span>
+                <span>-<a href="#" class="tip"  columnId="165" >光棍节</a></span>
+                <span>-<a href="#" class="tip"  columnId="123" >要发日</a></span>
+                <span>-<a href="#" class="tip"  columnId="124" >要爱你</a></span>
+                <span>-<a href="#" class="tip"  columnId="125" >成双日</a></span>
+                <span>-<a href="#" class="tip"  columnId="126" >倒数日</a></span>
+                <span>-<a href="#" class="tip"  columnId="127" >誓要爱</a></span>
+                <span>-<a href="#" class="tip"  columnId="128" >铁哥们日</a></span>
+                <span>-<a href="#" class="tip"  columnId="129" >誓要发</a></span>
+                <span>-<a href="#" class="tip"  columnId="130" >我爱你</a></span>
+                <span>-<a href="#" class="tip"  columnId="133" >爱己日</a></span>
+                <span>-<a href="#" class="tip"  columnId="135" >反转日</a></span>
+                <span>-<a href="#" class="tip"  columnId="148" >亲亲日</a></span>
+                <span>-<a href="#" class="tip"  columnId="153" >发财日</a></span>
+                <span>-<a href="#" class="tip"  columnId="155" >就要爱</a></span>
+                <span>-<a href="#" class="tip"  columnId="160" >双十</a></span>
+                <span>-<a href="#" class="tip"  columnId="177" >双十二</a></span>
+                <span>-<a href="#" class="tip"  columnId="186" >要爱日</a></span>
+                <span>-<a href="#" class="tip"  columnId="189" >安全日</a></span>
+                <span>-<a href="#" class="tip"  columnId="250" >誓爱妻</a></span>
+                <span>-<a href="#" class="tip"  columnId="265" >我要妻</a></span>
+                <span>-<a href="#" class="tip"  columnId="266" >我要发</a></span>
+                <span>-<a href="#" class="tip"  columnId="279" >我爱发</a></span>
+                <span>-<a href="#" class="tip"  columnId="283" >六六顺</a></span>
+                <span>-<a href="#" class="tip"  columnId="134" >我爱妻</a></span>
+                <span>-<a href="#" class="tip"  columnId="149" >爱妻日</a></span>
+                <span>-<a href="#" class="tip"  columnId="293" >亲一亲</a></span>
+            </div>
+        </li>
+        <li><a  class="ex"
+                columnId="208" href="#">主题日</a>
+            <div class="ex_arrow" style="display:none;"></div>
+            <div class="ex_box" style="display:none;">
+                <span>-<a href="#" class="tip"  columnId="164" >世界勤俭日</a></span>
+                <span>-<a href="#" class="tip"  columnId="170" >世界厕所日</a></span>
+                <span>-<a href="#" class="tip"  columnId="171" >世界问候日</a></span>
+                <span>-<a href="#" class="tip"  columnId="206" >国际气象节</a></span>
+                <span>-<a href="#" class="tip"  columnId="163" >男性健康日</a></span>
+                <span>-<a href="#" class="tip"  columnId="219" >全国爱耳日</a></span>
+                <span>-<a href="#" class="tip"  columnId="218" >学雷锋日</a></span>
+                <span>-<a href="#" class="tip"  columnId="228" >世界水日</a></span>
+                <span>-<a href="#" class="tip"  columnId="229" >世界气象日</a></span>
+                <span>-<a href="#" class="tip"  columnId="246" >世界卫生日</a></span>
+                <span>-<a href="#" class="tip"  columnId="248" >世界地球日</a></span>
+                <span>-<a href="#" class="tip"  columnId="249" >国际秘书日</a></span>
+                <span>-<a href="#" class="tip"  columnId="260" >世界微笑日</a></span>
+                <span>-<a href="#" class="tip"  columnId="264" >国际家庭日</a></span>
+                <span>-<a href="#" class="tip"  columnId="268" >世界无烟日</a></span>
+                <span>-<a href="#" class="tip"  columnId="168" >国际宽容日</a></span>
+                <span>-<a href="#" class="tip"  columnId="227" >消费者日</a></span>
+                <span>-<a href="#" class="tip"  columnId="172" >艾滋病日</a></span>
+                <span>-<a href="#" class="tip"  columnId="169" >糖尿病日</a></span>
+                <span>-<a href="#" class="tip"  columnId="287" >国际禁毒日</a></span>
+                <span>-<a href="#" class="tip"  columnId="288" >国际接吻日</a></span>
+                <span>-<a href="#" class="tip"  columnId="289" >世界人口日</a></span>
+            </div>
+        </li>
+        <li><a  class="ex"
+                columnId="209" href="#">纪念日</a>
+            <div class="ex_arrow" style="display:none;"></div>
+            <div class="ex_box" style="display:none;">
+                <span>-<a href="#" class="tip"  columnId="178" >南京大屠杀</a></span>
+                <span>-<a href="#" class="tip"  columnId="182" >毛泽东诞辰</a></span>
+                <span>-<a href="#" class="tip"  columnId="184" >澳门回归日</a></span>
+                <span>-<a href="#" class="tip"  columnId="183" >雷锋诞辰</a></span>
+            </div>
+        </li>
+    </ul>
+    <div class="clear"></div>
+</div>
+<div class="treelist">
+    <h1>贺词大全</h1>
+    <ul>
+        <li><a  class="ex"
+                columnId="235" href="#">结婚生子</a>
+            <div class="ex_arrow" style="display:none;"></div>
+            <div class="ex_box" style="display:none;">
+                <span>-<a href="#" class="tip"  columnId="225" >喜得贵子</a></span>
+                <span>-<a href="#" class="tip"  columnId="211" >结婚短信</a></span>
+            </div>
+        </li>
+        <li><a  class="ex"
+                columnId="238" href="#">校园寄语</a>
+            <div class="ex_arrow" style="display:none;"></div>
+            <div class="ex_box" style="display:none;">
+                <span>-<a href="#" class="tip"  columnId="234" >开学短信</a></span>
+                <span>-<a href="#" class="tip"  columnId="239" >毕业短信</a></span>
+                <span>-<a href="#" class="tip"  columnId="284" >高考</a></span>
+                <span>-<a href="#" class="tip"  columnId="290" >暑假快乐</a></span>
+            </div>
+        </li>
+        <li><a
+                columnId="240" href="#">开业短信</a>
+        </li>
+        <li><a
+                columnId="241" href="#">乔迁短信</a>
+        </li>
+        <li><a
+                columnId="242" href="#">升职短信</a>
+        </li>
+    </ul>
+    <div class="clear"></div>
+</div>
+<div class="treelist">
+    <h1>其他短信</h1>
+    <ul>
+        <li><a
+                columnId="151" href="#">热点短信</a>
+        </li>
+        <li><a
+                columnId="156" href="#">感悟人生</a>
+        </li>
+        <li><a
+                columnId="267" href="#">个性签名</a>
+        </li>
+        <li><a  class="ex"
+                columnId="269" href="#">笑话大全</a>
+            <div class="ex_arrow" style="display:none;"></div>
+            <div class="ex_box" style="display:none;">
+                <span>-<a href="#" class="tip"  columnId="272" >冷笑话</a></span>
+                <span>-<a href="#" class="tip"  columnId="271" >调侃短信</a></span>
+                <span>-<a href="#" class="tip"  columnId="157" >趣味短信</a></span>
+                <span>-<a href="#" class="tip"  columnId="281" >爆笑口误</a></span>
+                <span>-<a href="#" class="tip"  columnId="282" >囧糗事</a></span>
+            </div>
+        </li>
+        <li><a  class="ex"
+                columnId="273" href="#">英文短信</a>
+            <div class="ex_arrow" style="display:none;"></div>
+            <div class="ex_box" style="display:none;">
+                <span>-<a href="#" class="tip"  columnId="274" >唯美英语</a></span>
+                <span>-<a href="#" class="tip"  columnId="275" >励志英语</a></span>
+                <span>-<a href="#" class="tip"  columnId="276" >爱情英语</a></span>
+            </div>
+        </li>
+        <li><a
+                columnId="258" href="#">红色短信</a>
+        </li>
+        <li><a
+                columnId="257" href="#">经典短信</a>
+        </li>
+    </ul>
+    <div class="clear"></div>
+</div>
+</div>
+<b class="bt"></b>
+</div>
+<div class="clear"></div>
+<!--左下广告开始-->
+<script type="text/javascript" src="/js/ad/column_left_ad.js"></script>
+<!---左下广告结束-->
+</div>
+
+<!-- right开始 -->
+<div class="right" style="padding-left:20px;">
+    <div class="r_title"><b>日常祝福</b>
+        <div class="submit">
+            <input class="text" type="text" name="column.content" id="content" value="" size="30" maxlength="30"/>
+            <input class="btn" type="submit" name="columnBtn" id="columnBtn" value=""/>
+        </div>
+    </div>
+    <ul class="list">
+        <li class="tit"><span class="w1">NO</span><span class="w2" style="">内容</span><span class="w3">操作</span></li>
+        <li>
+            <span class="w1" columnId="77" columnName="日常祝福"  >1</span>
+            <span class="w2 readContent" original-title='好的朋友我会珍惜，好的微笑我会留住，好的信息我会珍藏，好的祝福我会给你：来也匆匆，去也匆匆，彼此忙碌不得空，关心问候在心中，天凉，记得添衣！'>好的朋友我会珍惜，好的微笑我会留住，好的信息我会珍藏，好的祝福我会给你：来也匆匆，去也匆匆，彼此忙碌不得空，关心问候在心中，天凉，记得添衣！</span>
+		<span class="w3">
+			<a class="a1" href="/taskmanage/input_zhufu.jhtml?contentId=25198" onclick="return isSendNum('','/')" target="_blank">一键送</a>
+			<a style="dispaly:none;" class="a2" href="/taskmanage/task_input.jhtml?contentId=25198" onclick="return isSendNum_task('','/')" target="_blank">定制下发</a>
+			<div class="wbShare">分享到：<a class="iconSina" title="分享到新浪微博">&nbsp;</a><a class="iconQQ" title="分享到腾讯微博">&nbsp;</a><a title="分享到腾讯空间" class="iconQzone">&nbsp;</a><a title="分享到人人网" class="iconRenRen">&nbsp;</a></div>
+		</span>
+        </li>
+        <li>
+            <span class="w1" columnId="77" columnName="日常祝福"  >2</span>
+            <span class="w2 readContent" original-title='短信一条，收到就行；有我祝福，知道就行；今天的你，顺利就行；记得想我，偶尔也行；看完以后，笑笑就行。新的一周，记得快乐就行！'>短信一条，收到就行；有我祝福，知道就行；今天的你，顺利就行；记得想我，偶尔也行；看完以后，笑笑就行。新的一周，记得快乐就行！</span>
+		<span class="w3">
+			<a class="a1" href="/taskmanage/input_zhufu.jhtml?contentId=25165" onclick="return isSendNum('','/')" target="_blank">一键送</a>
+			<a style="dispaly:none;" class="a2" href="/taskmanage/task_input.jhtml?contentId=25165" onclick="return isSendNum_task('','/')" target="_blank">定制下发</a>
+			<div class="wbShare">分享到：<a class="iconSina" title="分享到新浪微博">&nbsp;</a><a class="iconQQ" title="分享到腾讯微博">&nbsp;</a><a title="分享到腾讯空间" class="iconQzone">&nbsp;</a><a title="分享到人人网" class="iconRenRen">&nbsp;</a></div>
+		</span>
+        </li>
+        <li>
+            <span class="w1" columnId="77" columnName="日常祝福"  >3</span>
+            <span class="w2 readContent" original-title='风飞扬，落叶黄，天气凉凉凉；工作累，心疲惫，日子忙忙忙；朋友情，遥相寄，思念长长长。天凉加衣裳，身体多保养，心情要开朗，愿你幸福强强强。'>风飞扬，落叶黄，天气凉凉凉；工作累，心疲惫，日子忙忙忙；朋友情，遥相寄，思念长长长。天凉加衣裳，身体多保养，心情要开朗，愿你幸福强强强。</span>
+		<span class="w3">
+			<a class="a1" href="/taskmanage/input_zhufu.jhtml?contentId=25164" onclick="return isSendNum('','/')" target="_blank">一键送</a>
+			<a style="dispaly:none;" class="a2" href="/taskmanage/task_input.jhtml?contentId=25164" onclick="return isSendNum_task('','/')" target="_blank">定制下发</a>
+			<div class="wbShare">分享到：<a class="iconSina" title="分享到新浪微博">&nbsp;</a><a class="iconQQ" title="分享到腾讯微博">&nbsp;</a><a title="分享到腾讯空间" class="iconQzone">&nbsp;</a><a title="分享到人人网" class="iconRenRen">&nbsp;</a></div>
+		</span>
+        </li>
+        <li>
+            <span class="w1" columnId="77" columnName="日常祝福"  >4</span>
+            <span class="w2 readContent" original-title='千万人之中，我遇到了你，这就是缘；你成了我最牵挂的朋友，这就是分。缘分不浅，祝福更深：朋友，深秋时节，记得添衣，好好照顾自己。'>千万人之中，我遇到了你，这就是缘；你成了我最牵挂的朋友，这就是分。缘分不浅，祝福更深：朋友，深秋时节，记得添衣，好好照顾自己。</span>
+		<span class="w3">
+			<a class="a1" href="/taskmanage/input_zhufu.jhtml?contentId=25163" onclick="return isSendNum('','/')" target="_blank">一键送</a>
+			<a style="dispaly:none;" class="a2" href="/taskmanage/task_input.jhtml?contentId=25163" onclick="return isSendNum_task('','/')" target="_blank">定制下发</a>
+			<div class="wbShare">分享到：<a class="iconSina" title="分享到新浪微博">&nbsp;</a><a class="iconQQ" title="分享到腾讯微博">&nbsp;</a><a title="分享到腾讯空间" class="iconQzone">&nbsp;</a><a title="分享到人人网" class="iconRenRen">&nbsp;</a></div>
+		</span>
+        </li>
+        <li>
+            <span class="w1" columnId="77" columnName="日常祝福"  >5</span>
+            <span class="w2 readContent" original-title='我要穿棉裤，冻得扛不住，一夜寒风来，啪啪掉几度。我要穿棉裤，谁也挡不住。翻开衣柜找，藏在最深处。&nbsp;我要穿棉裤啊，我没hold住。说穿我就穿，谁敢说个不！！！未来一周内，还要降几度！若不穿棉裤，后果请自负。。。'>我要穿棉裤，冻得扛不住，一夜寒风来，啪啪掉几度。我要穿棉裤，谁也挡不住。翻开衣柜找，藏在最深处。&nbsp;我要穿棉裤啊，我没hold住。说穿我就穿，谁敢说个不！！！未来一周内，还要降几度！若不穿棉裤，后果请自负。。。</span>
+		<span class="w3">
+			<a class="a1" href="/taskmanage/input_zhufu.jhtml?contentId=25162" onclick="return isSendNum('','/')" target="_blank">一键送</a>
+			<a style="dispaly:none;" class="a2" href="/taskmanage/task_input.jhtml?contentId=25162" onclick="return isSendNum_task('','/')" target="_blank">定制下发</a>
+			<div class="wbShare">分享到：<a class="iconSina" title="分享到新浪微博">&nbsp;</a><a class="iconQQ" title="分享到腾讯微博">&nbsp;</a><a title="分享到腾讯空间" class="iconQzone">&nbsp;</a><a title="分享到人人网" class="iconRenRen">&nbsp;</a></div>
+		</span>
+        </li>
+        <li>
+            <span class="w1" columnId="77" columnName="日常祝福"  >6</span>
+            <span class="w2 readContent" original-title='岁月无情人有情，对你思念永不停。虽然不能天天见，分分秒秒把你念。发个信息谈谈心，借此表达我真心。不能天天见到你，只好短信问候你：天凉记得添衣'>岁月无情人有情，对你思念永不停。虽然不能天天见，分分秒秒把你念。发个信息谈谈心，借此表达我真心。不能天天见到你，只好短信问候你：天凉记得添衣</span>
+		<span class="w3">
+			<a class="a1" href="/taskmanage/input_zhufu.jhtml?contentId=25161" onclick="return isSendNum('','/')" target="_blank">一键送</a>
+			<a style="dispaly:none;" class="a2" href="/taskmanage/task_input.jhtml?contentId=25161" onclick="return isSendNum_task('','/')" target="_blank">定制下发</a>
+			<div class="wbShare">分享到：<a class="iconSina" title="分享到新浪微博">&nbsp;</a><a class="iconQQ" title="分享到腾讯微博">&nbsp;</a><a title="分享到腾讯空间" class="iconQzone">&nbsp;</a><a title="分享到人人网" class="iconRenRen">&nbsp;</a></div>
+		</span>
+        </li>
+        <li>
+            <span class="w1" columnId="77" columnName="日常祝福"  >7</span>
+            <span class="w2 readContent" original-title='幸福是每天按时吃早餐，幸福是经常看到笑脸，幸福是冬天懒洋洋的晒太阳，幸福是有人关心，幸福是给牵挂的朋友送去祝福问候：天冷保重自己。'>幸福是每天按时吃早餐，幸福是经常看到笑脸，幸福是冬天懒洋洋的晒太阳，幸福是有人关心，幸福是给牵挂的朋友送去祝福问候：天冷保重自己。</span>
+		<span class="w3">
+			<a class="a1" href="/taskmanage/input_zhufu.jhtml?contentId=25160" onclick="return isSendNum('','/')" target="_blank">一键送</a>
+			<a style="dispaly:none;" class="a2" href="/taskmanage/task_input.jhtml?contentId=25160" onclick="return isSendNum_task('','/')" target="_blank">定制下发</a>
+			<div class="wbShare">分享到：<a class="iconSina" title="分享到新浪微博">&nbsp;</a><a class="iconQQ" title="分享到腾讯微博">&nbsp;</a><a title="分享到腾讯空间" class="iconQzone">&nbsp;</a><a title="分享到人人网" class="iconRenRen">&nbsp;</a></div>
+		</span>
+        </li>
+        <li>
+            <span class="w1" columnId="77" columnName="日常祝福"  >8</span>
+            <span class="w2 readContent" original-title='有一种孤独叫做情到深处，有一种祈祷叫做深藏不露，有一种思念叫做望穿秋水，有一种寒冷叫做忘穿秋裤，有一种关怀来自心底叮嘱：天冷，多穿衣。'>有一种孤独叫做情到深处，有一种祈祷叫做深藏不露，有一种思念叫做望穿秋水，有一种寒冷叫做忘穿秋裤，有一种关怀来自心底叮嘱：天冷，多穿衣。</span>
+		<span class="w3">
+			<a class="a1" href="/taskmanage/input_zhufu.jhtml?contentId=25159" onclick="return isSendNum('','/')" target="_blank">一键送</a>
+			<a style="dispaly:none;" class="a2" href="/taskmanage/task_input.jhtml?contentId=25159" onclick="return isSendNum_task('','/')" target="_blank">定制下发</a>
+			<div class="wbShare">分享到：<a class="iconSina" title="分享到新浪微博">&nbsp;</a><a class="iconQQ" title="分享到腾讯微博">&nbsp;</a><a title="分享到腾讯空间" class="iconQzone">&nbsp;</a><a title="分享到人人网" class="iconRenRen">&nbsp;</a></div>
+		</span>
+        </li>
+        <li>
+            <span class="w1" columnId="77" columnName="日常祝福"  >9</span>
+            <span class="w2 readContent" original-title='送秋波要发电，送秋思要失眠，送秋月要看天，送秋花要上山，送秋实要果盘，都麻烦，那就送你秋天的问候吧，前面的每样都蘸上一点，祝你日子蜜蜜甜！'>送秋波要发电，送秋思要失眠，送秋月要看天，送秋花要上山，送秋实要果盘，都麻烦，那就送你秋天的问候吧，前面的每样都蘸上一点，祝你日子蜜蜜甜！</span>
+		<span class="w3">
+			<a class="a1" href="/taskmanage/input_zhufu.jhtml?contentId=25094" onclick="return isSendNum('','/')" target="_blank">一键送</a>
+			<a style="dispaly:none;" class="a2" href="/taskmanage/task_input.jhtml?contentId=25094" onclick="return isSendNum_task('','/')" target="_blank">定制下发</a>
+			<div class="wbShare">分享到：<a class="iconSina" title="分享到新浪微博">&nbsp;</a><a class="iconQQ" title="分享到腾讯微博">&nbsp;</a><a title="分享到腾讯空间" class="iconQzone">&nbsp;</a><a title="分享到人人网" class="iconRenRen">&nbsp;</a></div>
+		</span>
+        </li>
+        <li>
+            <span class="w1" columnId="77" columnName="日常祝福"  >10</span>
+            <span class="w2 readContent" original-title='好友一场，送你祝福，愿你比春之百花柔情，比夏之烈日热情，比秋之月光温馨，比冬之雪花纯情，愿我的祝福陪伴你四季美好，愿你幸福一生常随！'>好友一场，送你祝福，愿你比春之百花柔情，比夏之烈日热情，比秋之月光温馨，比冬之雪花纯情，愿我的祝福陪伴你四季美好，愿你幸福一生常随！</span>
+		<span class="w3">
+			<a class="a1" href="/taskmanage/input_zhufu.jhtml?contentId=18688" onclick="return isSendNum('','/')" target="_blank">一键送</a>
+			<a style="dispaly:none;" class="a2" href="/taskmanage/task_input.jhtml?contentId=18688" onclick="return isSendNum_task('','/')" target="_blank">定制下发</a>
+			<div class="wbShare">分享到：<a class="iconSina" title="分享到新浪微博">&nbsp;</a><a class="iconQQ" title="分享到腾讯微博">&nbsp;</a><a title="分享到腾讯空间" class="iconQzone">&nbsp;</a><a title="分享到人人网" class="iconRenRen">&nbsp;</a></div>
+		</span>
+        </li>
+        <li class="noborder"></li>
+    </ul><div class="Cut_page" style="margin:0 0 30px 0;text-align:right;">
+    <img src="/images/pg_first_02.gif" pageNo="1" totalPage="162"  title="首页" />
+    <img src="/images/pg_prev_02.gif" pageNo="0" totalPage="162"  title="上页" />
+    当前第1/162页，前往
+    <input id="goPage" name="goPage" title="goPage" size="3" value="1" onkeyup="this.value=this.value.replace(/\D/g,'');" onchange="this.value=this.value.replace(/\D/g,'')" />
+    <script>
+        jQuery("input[name=goPage]").keydown(function(event){
+            if (event.which == 13) {
+                return false;
+            }
+        });
+    </script>
+    <input type="button" name="goPageSize" id="goPageSize" value="Go" />
+    共162页记录数共1,617条
+    <img src="/images/pg_next_01.gif" pageNo="2" totalPage="162" style="cursor: pointer;" title="下页" />
+    <img src="/images/pg_last_01.gif" pageNo="162" totalPage="162" style="cursor: pointer;" title="末页" />
+</div>
+</div>
+<!--right-->
+<div class="clear"></div>
+</div>
+</form>
+
+<!--底部横幅广告开始-->
+<script type="text/javascript" src="/js/ad/bottom_poster.js"></script>
+<!---底部横幅广告结束-->
+
+</div>
+<b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
+</div>
+
+<div style="display:none;">
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fbe7a708988b27485de9881fd5e3b326a' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div><div class="clear"></div>
+<!--main 结束-->
+<div id="footer">
+    <p><a href="/helpmanager/help01.jsp">关于爱祝福</a>|<a href="/helpmanager/help06.jsp">联系我们</a>|<a href="/helpmanager/help04.jsp">免责声明</a>|<a href="/register.jhtml">会员注册</a>|<a href="/feedback.jsp">用户反馈</a>|<a href="/helpmanager/help05.jsp">友情链接</a></p>
+    <p>Copyright &copy; HangZhou SunBird Digital Media Technology CO.,LTD</p>
+    <p>爱祝福网 版权所有</p>
+</div>
+<!--两侧广告代码(开始)-->
+<script type="text/javascript" src="/js/ad/flanks.js"></script>
+<!--两侧广告代码(结束)-->
+
+<!--底部右下角浮窗广告代码(开始)-->
+<script type="text/javascript" src="/js/ad/right_bottom_window.js"></script>
+<!--底部右下角浮窗广告代码(结束)-->
+</body>
+</html>

@@ -10,6 +10,12 @@ def index():
     return render_template('index.html')
 
 
+#测试首页
+@frontend.route('/test')
+def test():
+    return render_template('home.html')
+
+
 #***********************
 
 @frontend.route('/bonetest')
