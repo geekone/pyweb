@@ -23,7 +23,7 @@ class User(db.Model):
     def __repr__(self):
         return "<%s>" % self.email
 
-
+#分类模型
 class Category(db.Model):
     __tablename__ = 'msg_category'
     id = db.Column(db.Integer,primary_key=True)
@@ -33,11 +33,12 @@ class Category(db.Model):
     def __repr__(self):
         return "<%s>" % self.name
 
-
+#条目
 class Item(db.Model):
     __tablename__='msg_item'
     id = db.Column(db.Integer,primary_key=True)
     title = db.Column(db.String(255))
+    cateid = db.Column(db.Integer)
 
     def __repr__(self):
         return "<%s>" % self.title

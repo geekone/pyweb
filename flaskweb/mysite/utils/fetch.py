@@ -4,11 +4,15 @@ __author__ = 'Administrator'
 
 from pyquery import PyQuery as pq
 
+#
+#<span class="w1" columnname="日常祝福" columnid="77">10</span>
+
+
 url = "http://www.aizhufu.cn/duanxinku/column/77/1.html"
 
 from pyquery import PyQuery as pq
 
-
+#取总分类
 def getCategory():
     list = []
     d = pq(url)
@@ -17,7 +21,7 @@ def getCategory():
         list.append(pq(div).find('h1').html())
     return list;
 
-
+#取子分类
 def getSubCategory():
     list = []
     d = pq(url)
@@ -29,13 +33,20 @@ def getSubCategory():
         list.append(_list)
     return list
 
+#取条目
+def getItem():
+    list = []
+    d = pq(url)
+    li_list = d('.readContent')
+    for li in li_list:
+        #print pq(li).attr('original-title')
+        _title =  pq(li).html()
+        list.append(_title)
+    return list
+
 
 if __name__ == '__main__':
-#    list = getCategory()
-#    print list
-     list =  getSubCategory()
-     for ls in list:
-         print ls[0],ls[1]
+    getItem()
 
 
 

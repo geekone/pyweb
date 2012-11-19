@@ -2,7 +2,7 @@
 from mysite.models.model import Category,Item
 
 from mysite.extensions import db
-from mysite.utils.fetch import getCategory,getSubCategory
+from mysite.utils.fetch import getCategory,getSubCategory,getItem
 
 
 __author__ = 'window2003@gmail.com'
@@ -25,26 +25,20 @@ def categorylist():
     #打印log
 #    current_app.logger.debug("this is debug")
 #    current_app.logger.error("this is error")
-    _category = Category.query.all()
-    print _category
-    _item = Item.query.all()
-    print _item
-    return render_template('admin/categorylist.html')
+    _categorylist = Category.query.all()
+    return render_template('admin/categorylist.html',categorylist = _categorylist)
 
 #数据列表
 @admin.route('/itemlist')
 def itemlist():
-    return render_template('admin/itemlist.html')
+    _itemlist = Item.query.all()
+    return render_template('admin/itemlist.html',itemlist=_itemlist)
 
 
-# 初始首页跳转
+# 初始数据并首页跳转
 @admin.route('/initdata')
 def initdata():
-#    _category = Category(name="n1")
-#    _item = Item(title="t1")
-#    db.session.add(_category)
-#    db.session.add(_item)
-#    db.session.commit()
+    #添加分类
     _categoryList = getCategory()
     for _catename in _categoryList:
        _category = Category(name=_catename,subid = 1)
@@ -55,5 +49,13 @@ def initdata():
         _category = Category(name=_cate[0],subid=_cate[1])
         db.session.add(_category)
 
+    #取条目
+    _itemList = getItem()
+    for _title in _itemList:
+        item = Item(title = _title,cateid = 77 )
+        db.session.add(item)
+
     db.session.commit()
     return redirect(url_for('index'))
+
+

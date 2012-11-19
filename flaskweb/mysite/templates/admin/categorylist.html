@@ -3,6 +3,16 @@
 <div class="row-fluid">
     <div class="span9">
         <h2>category list</h2>
+        <table class="table">
+            <tr>
+                <th>编号</th><th>分类名称</th><th>抓取</th>
+            </tr>
+            {% for category in categorylist %}
+            <tr>
+                <td>{{category.id}}</td><td>{{category.name}}</td><td>{{category.subid}}</td>
+            </tr>
+            {% endfor %}
+        </table>
     </div>
 </div>
 {% endblock %}
