@@ -28,6 +28,7 @@ class Category(db.Model):
     __tablename__ = 'msg_category'
     id = db.Column(db.Integer,primary_key=True)
     name = db.Column(db.String(50))
+    subid = db.Column(db.Integer)
 
     def __repr__(self):
         return "<%s>" % self.name

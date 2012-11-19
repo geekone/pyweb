@@ -2,6 +2,8 @@
 from mysite.models.model import Category,Item
 
 from mysite.extensions import db
+from mysite.utils.fetch import getCategory,getSubCategory
+
 
 __author__ = 'window2003@gmail.com'
 
@@ -39,8 +41,19 @@ def itemlist():
 @admin.route('/initdata')
 def initdata():
 #    _category = Category(name="n1")
-    _item = Item(title="t1")
+#    _item = Item(title="t1")
 #    db.session.add(_category)
-    db.session.add(_item)
+#    db.session.add(_item)
+#    db.session.commit()
+    _categoryList = getCategory()
+    for _catename in _categoryList:
+       _category = Category(name=_catename,subid = 1)
+       db.session.add(_category)
+
+    _sublist = getSubCategory()
+    for _cate in _sublist:
+        _category = Category(name=_cate[0],subid=_cate[1])
+        db.session.add(_category)
+
     db.session.commit()
     return redirect(url_for('index'))
